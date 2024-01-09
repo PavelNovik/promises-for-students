@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Hello world
+
+<script src="./axios.js"></script>
+<script src="./api.js"></script>
+
+
+<script>
+    api.sendStudentsCountToItKamasutra(20)
+        .then(res => {
+            console.log(res);
+            return res.data
+        }).then(data => console.log(data));
+
+
+    // let myPromise = new Promise((res) => {
+    //     setTimeout(()=> {
+    //         alert('Hello');
+    //         res()
+    //     }, 2000)
+    //
+    // });
+    // myPromise.then(( ) => {
+    //     console.log("myPromise зарезолвился, и я узнал об этом");
+    // })
+
+    // const myPromise1 = new Promise((res)=> {
+    //     setTimeout(()=> {
+    //         res(Math.random())
+    //
+    //     })
+    // }, 3000)
+    // myPromise1.then((data)=> console.log('myPromise1 is resolved  ', data))
+    // myPromise1.then((data)=> console.log('myPromise1 is resolved  ', data))
+    // myPromise1.then((data)=> console.log('myPromise1 is resolved  ', data))
+    // console.log('finish')
+
+
+    function doAfter(time) {
+        return new Promise((res) => {
+            setTimeout(() => {
+                // console.log('I\'m finished')
+                res()
+            }, time * 1000)
+        })
+    }
+
+    // doAfter(5).then(() => console.log('I\'m finished'))
+    // doAfter(7).then(() => console.log('I\'m finished'))
+
+    // let promise3 = doAfter(3);
+    // // promise3.then( () => console.log('я сработал через 3 секунд') );
+    // // promise3.then( () => console.log('и я тоже следом сработал через 3 секунд') );
+    // // promise3.then( () => console.log('и я') );
+    // setTimeout(()=> {
+    //     promise3.then(()=> console.log('hello'))
+    // }, 1000)
+
+    // const prprp= new Promise((res)=> {
+    //     let i = 0
+    //     setInterval(()=> {
+    //         i++
+    //         // console.log(i)
+    //         res(i)
+    //     }, 5000)
+    // })
+    //
+    // prprp.then((data) => console.log(data))
+    // prprp.then((data) => console.log(data))
+    // prprp.then((data) => console.log(data))
+    // prprp.then((data) => console.log(data))
+
+    // let pr = new Promise( (resolve) => {
+    //     let data = {
+    //         cities: [{title: "Minsk"}, {title: "Kiev"}],
+    //         website: "it-kamasutra.com"
+    //     };
+    //     resolve(data);
+    // });
+    //
+    // pr.then( data => {
+    //     console.log(data);
+    //     return data.website
+    // })
+    //     .then( website => {
+    //         console.log(website);
+    //     })
+
+
+
+</script>
+
+</body>
+</html>
